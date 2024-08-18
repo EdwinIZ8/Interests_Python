@@ -16,7 +16,7 @@ import sys
 import os
 
 
-width = 800 # 默认图片宽度
+width = 800  # 默认图片宽度
 
 
 def resize(filename_to_resize: str):
@@ -36,13 +36,6 @@ def nextfile(filename_to_change: str):
     """
     换文件名。（比如：001.jpg -> 002.jpg）
     """
-    # temp = list(filename_to_change)
-    # if temp[-5] == "9":
-    #     temp[-6] = str(int(temp[-6]) + 1)
-    #     temp[-5] = "0"
-    # else:
-    #     temp[-5] = str(int(temp[-5]) + 1)
-    # return "".join(temp)
     if filename_to_change[-5] == "9":
         filename_to_change[-6] = str(int(filename_to_change[-6]) + 1)
         filename_to_change[-5] = "0"
@@ -68,4 +61,3 @@ if __name__ == "__main__":
             resize(filename)
             filename = nextfile(filename)
         print("\n----------运行完毕----------\n")
-
